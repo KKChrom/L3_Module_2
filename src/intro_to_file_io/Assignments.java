@@ -19,10 +19,12 @@ public class Assignments {
 	}
 	public static void encrypt(byte[] Message) throws IOException
 	{
-		
+
+	}
+	public static void decrypt(byte[] Message) throws IOException
+	{
 		FileWriter fw = new FileWriter("src/intro_to_file_io/crypt.txt");
-		String encoded = Base64.getEncoder().encodeToString(Message);
-		fw.write(encoded);
-		fw.close();
+		String decoded = Base64.getDecoder().decode(Message);
+		
 	}
 }
